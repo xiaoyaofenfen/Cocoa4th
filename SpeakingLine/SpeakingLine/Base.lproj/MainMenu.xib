@@ -14,6 +14,8 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
+                <outlet property="speakButton" destination="mIQ-Mf-cYH" id="i5J-Dn-oru"/>
+                <outlet property="stopButton" destination="IzJ-rm-xCa" id="GvM-v5-Spn"/>
                 <outlet property="stopIt" destination="s3r-2e-cwH" id="LdM-l7-uHZ"/>
                 <outlet property="textField" destination="seT-oQ-sts" id="pjT-mw-F6G"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
@@ -698,7 +700,7 @@
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IzJ-rm-xCa">
                         <rect key="frame" x="294" y="13" width="81" height="32"/>
-                        <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="s3r-2e-cwH">
+                        <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="s3r-2e-cwH">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                             <connections>

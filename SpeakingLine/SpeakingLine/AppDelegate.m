@@ -12,6 +12,8 @@
 
 @property (weak) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSTextField *textField;
+@property (weak) IBOutlet NSButton *speakButton;
+@property (weak) IBOutlet NSButton *stopButton;
 
 - (IBAction)stopIt:(id)sender;
 - (IBAction)sayIt:(id)sender;
@@ -23,7 +25,7 @@
     NSSpeechSynthesizer *speechSynth;
 }
 
-@synthesize textField;
+@synthesize textField, speakButton, stopButton;
 
 -(instancetype) init
 {
@@ -32,6 +34,8 @@
     {
         NSLog(@"init the AppDelegate");
         speechSynth = [[NSSpeechSynthesizer alloc] initWithVoice:nil];
+
+        [speechSynth setDelegate: self];
     }
 
     return self;
@@ -59,6 +63,17 @@
     }
 
     [speechSynth startSpeakingString:text];
+    speakButton.enabled = NO;
+    stopButton.enabled = YES;
     NSLog(@"staring speaking: %@", text);
 }
+
+- (void)speechSynthesizer:(NSSpeechSynthesizer *)sender didFinishSpeaking:(BOOL)success
+{
+    NSLog(@"the state of speech synthesizer: %d", success);
+
+    speakButton.enabled = YES;
+    stopButton.enabled = NO;
+}
+
 @end
