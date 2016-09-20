@@ -14,9 +14,15 @@
 @property (weak) IBOutlet NSTextField *textField;
 @property (weak) IBOutlet NSButton *speakButton;
 @property (weak) IBOutlet NSButton *stopButton;
+@property (weak) IBOutlet NSTableView *tableView;
+
+@property (nonatomic, strong) NSArray *voices;
 
 - (IBAction)stopIt:(id)sender;
 - (IBAction)sayIt:(id)sender;
+
+- (void)tableViewSelectionDidChange:(NSNotification *) notification;
+- (void)awakeFromNib;
 
 @end
 
@@ -25,7 +31,7 @@
     NSSpeechSynthesizer *speechSynth;
 }
 
-@synthesize textField, speakButton, stopButton;
+@synthesize textField, speakButton, stopButton, voices, tableView;
 
 -(instancetype) init
 {
@@ -36,6 +42,10 @@
         speechSynth = [[NSSpeechSynthesizer alloc] initWithVoice:nil];
 
         [speechSynth setDelegate: self];
+
+        voices = [NSSpeechSynthesizer availableVoices];
+
+        
     }
 
     return self;
@@ -65,6 +75,7 @@
     [speechSynth startSpeakingString:text];
     speakButton.enabled = NO;
     stopButton.enabled = YES;
+    tableView.enabled = NO;
     NSLog(@"staring speaking: %@", text);
 }
 
@@ -74,6 +85,42 @@
 
     speakButton.enabled = YES;
     stopButton.enabled = NO;
+    tableView.enabled = YES;
 }
 
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
+{
+    return [voices count];
+}
+
+- (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex
+{
+    NSString *voice = [voices objectAtIndex:rowIndex];
+    NSDictionary *dict = [NSSpeechSynthesizer attributesForVoice:voice];
+
+    return [dict objectForKey:NSVoiceName];
+}
+
+- (void)tableViewSelectionDidChange:(NSNotification *) notification
+{
+    NSInteger row = [tableView selectedRow];
+    if(row < 0)
+    {
+        return ;
+    }
+
+    NSString *selectedVoice = [voices objectAtIndex:row];
+    [speechSynth setVoice:selectedVoice];
+    NSLog(@"new voice selected: %@", selectedVoice);
+}
+
+- (void)awakeFromNib
+{
+    NSString *defaultVoice = [NSSpeechSynthesizer defaultVoice];
+    NSInteger defaultRow = [voices indexOfObject:defaultVoice];
+    NSIndexSet *index = [NSIndexSet indexSetWithIndex:defaultRow];
+    [tableView selectRowIndexes:index byExtendingSelection:NO];
+    [tableView scrollRowToVisible:defaultRow];
+}
 @end
