@@ -123,4 +123,13 @@
     [tableView selectRowIndexes:index byExtendingSelection:NO];
     [tableView scrollRowToVisible:defaultRow];
 }
+
+- (BOOL)respondsToSelector:(SEL)aSelector
+{
+    NSString *name = NSStringFromSelector(aSelector);
+    NSLog(@"respondsToSelector: %@", name);
+    return [super respondsToSelector:aSelector];
+}
+
+
 @end

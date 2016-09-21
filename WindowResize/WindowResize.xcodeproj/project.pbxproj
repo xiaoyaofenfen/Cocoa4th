@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F5FDFE21D92B42600524C1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FDFE11D92B42600524C1D /* AppDelegate.m */; };
+		8F5FDFE51D92B42600524C1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FDFE41D92B42600524C1D /* main.m */; };
+		8F5FDFE71D92B42600524C1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F5FDFE61D92B42600524C1D /* Assets.xcassets */; };
+		8F5FDFEA1D92B42600524C1D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F5FDFE81D92B42600524C1D /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8F5FDFDD1D92B42600524C1D /* WindowResize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WindowResize.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F5FDFE01D92B42600524C1D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8F5FDFE11D92B42600524C1D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8F5FDFE41D92B42600524C1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8F5FDFE61D92B42600524C1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8F5FDFE91D92B42600524C1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		8F5FDFEB1D92B42600524C1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F5FDFDA1D92B42600524C1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F5FDFD41D92B42600524C1D = {
+			isa = PBXGroup;
+			children = (
+				8F5FDFDF1D92B42600524C1D /* WindowResize */,
+				8F5FDFDE1D92B42600524C1D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8F5FDFDE1D92B42600524C1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F5FDFDD1D92B42600524C1D /* WindowResize.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F5FDFDF1D92B42600524C1D /* WindowResize */ = {
+			isa = PBXGroup;
+			children = (
+				8F5FDFE01D92B42600524C1D /* AppDelegate.h */,
+				8F5FDFE11D92B42600524C1D /* AppDelegate.m */,
+				8F5FDFE61D92B42600524C1D /* Assets.xcassets */,
+				8F5FDFE81D92B42600524C1D /* MainMenu.xib */,
+				8F5FDFEB1D92B42600524C1D /* Info.plist */,
+				8F5FDFE31D92B42600524C1D /* Supporting Files */,
+			);
+			path = WindowResize;
+			sourceTree = "<group>";
+		};
+		8F5FDFE31D92B42600524C1D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F5FDFE41D92B42600524C1D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F5FDFDC1D92B42600524C1D /* WindowResize */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F5FDFEE1D92B42600524C1D /* Build configuration list for PBXNativeTarget "WindowResize" */;
+			buildPhases = (
+				8F5FDFD91D92B42600524C1D /* Sources */,
+				8F5FDFDA1D92B42600524C1D /* Frameworks */,
+				8F5FDFDB1D92B42600524C1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WindowResize;
+			productName = WindowResize;
+			productReference = 8F5FDFDD1D92B42600524C1D /* WindowResize.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F5FDFD51D92B42600524C1D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Imagination Studio";
+				TargetAttributes = {
+					8F5FDFDC1D92B42600524C1D = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 8F5FDFD81D92B42600524C1D /* Build configuration list for PBXProject "WindowResize" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8F5FDFD41D92B42600524C1D;
+			productRefGroup = 8F5FDFDE1D92B42600524C1D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F5FDFDC1D92B42600524C1D /* WindowResize */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8F5FDFDB1D92B42600524C1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F5FDFE71D92B42600524C1D /* Assets.xcassets in Resources */,
+				8F5FDFEA1D92B42600524C1D /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F5FDFD91D92B42600524C1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F5FDFE51D92B42600524C1D /* main.m in Sources */,
+				8F5FDFE21D92B42600524C1D /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8F5FDFE81D92B42600524C1D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F5FDFE91D92B42600524C1D /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8F5FDFEC1D92B42600524C1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8F5FDFED1D92B42600524C1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8F5FDFEF1D92B42600524C1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = WindowResize/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.liangfen.WindowResize;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8F5FDFF01D92B42600524C1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = WindowResize/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.liangfen.WindowResize;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8F5FDFD81D92B42600524C1D /* Build configuration list for PBXProject "WindowResize" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F5FDFEC1D92B42600524C1D /* Debug */,
+				8F5FDFED1D92B42600524C1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F5FDFEE1D92B42600524C1D /* Build configuration list for PBXNativeTarget "WindowResize" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F5FDFEF1D92B42600524C1D /* Debug */,
+				8F5FDFF01D92B42600524C1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8F5FDFD51D92B42600524C1D /* Project object */;
+}
