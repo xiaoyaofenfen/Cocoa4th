@@ -14,6 +14,8 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
+                <outlet property="label" destination="66V-ge-31p" id="KwD-hS-Huu"/>
+                <outlet property="slider" destination="4pF-jj-qbI" id="90e-un-hqV"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -679,9 +681,6 @@
                     <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hsN-MI-4Qb">
                         <rect key="frame" x="18" y="104" width="444" height="21"/>
                         <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="4pF-jj-qbI"/>
-                        <connections>
-                            <binding destination="Voe-Tx-rLC" name="value" keyPath="self.fido" id="2ms-QA-I4H"/>
-                        </connections>
                     </slider>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="66V-ge-31p">
                         <rect key="frame" x="222" y="81" width="37" height="17"/>
@@ -690,9 +689,6 @@
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
-                        <connections>
-                            <binding destination="Voe-Tx-rLC" name="value" keyPath="self.fido" id="L53-M7-p1T"/>
-                        </connections>
                     </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jOa-jM-8nC">
                         <rect key="frame" x="180" y="45" width="120" height="32"/>

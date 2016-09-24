@@ -11,6 +11,8 @@
 @interface AppDelegate ()
 
 @property (weak) IBOutlet NSWindow *window;
+@property (weak) IBOutlet NSSliderCell *slider;
+@property (weak) IBOutlet NSTextField *label;
 
 @property int fido;
 
@@ -20,7 +22,7 @@
 
 @implementation AppDelegate
 
-@synthesize fido;
+@synthesize fido, label, slider;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
@@ -34,4 +36,13 @@
 
     self.fido++;
 }
+
+- (void) awakeFromNib {
+
+    // binding
+    [slider bind:@"value" toObject:self withKeyPath:@"fido" options:nil];
+
+    [label bind:@"value" toObject:self withKeyPath:@"fido" options:nil];
+}
+
 @end
