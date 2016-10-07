@@ -13,6 +13,10 @@
 }
 
 @property (nonatomic, copy) NSMutableArray *employees;
+@property IBOutlet NSTableView *tableView;
+@property IBOutlet NSArrayController *employeeController;
+
+- (IBAction)createEmployee:(id)sender;
 
 - (void)insertObject:(Person *)p inEmployeesAtIndex:(NSUInteger)index;
 - (void)removeObjectFromEmployeesAtIndex:(NSUInteger)index;
