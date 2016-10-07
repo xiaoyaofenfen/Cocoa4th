@@ -7,14 +7,19 @@
 //
 
 #import <Cocoa/Cocoa.h>
+@class Person;
 
 @interface Document : NSDocument {
-    //NSMutableArray *employees;
 }
 
 @property (nonatomic, copy) NSMutableArray *employees;
 
-//- (void) setEmployees : (NSMutableArray *) a;
+- (void)insertObject:(Person *)p inEmployeesAtIndex:(NSUInteger)index;
+- (void)removeObjectFromEmployeesAtIndex:(NSUInteger)index;
 
+- (void)startObservingPerson: (Person *)person;
+- (void)stopObservingPerson: (Person *)person;
+
+- (void)changeKeyPath:(NSString *)keyPath ofObject:(id)obj toValue:(id)newValue;
 @end
 

@@ -7,6 +7,9 @@
 //
 
 #import "Document.h"
+#import "Person.h"
+
+static void *DocumentKVOContext;
 
 @interface Document ()
 
@@ -15,12 +18,6 @@
 @implementation Document
 
 @synthesize employees;
-
-//- (void) setEmployees : (NSMutableArray *) a {
-//    if(a == employees) return ;
-//
-//    employees = a;
-//}
 
 
 - (instancetype)init {
@@ -55,6 +52,68 @@
     // If you override either of these, you should also override -isEntireFileLoaded to return NO if the contents are lazily loaded.
     [NSException raise:@"UnimplementedMethod" format:@"%@ is unimplemented", NSStringFromSelector(_cmd)];
     return YES;
+}
+
+- (void)insertObject:(Person *)p inEmployeesAtIndex:(NSUInteger)index {
+    NSLog(@"adding %@ to %@", p, employees);
+
+    // push into undo stack
+    NSUndoManager *undo = [self undoManager];
+    [[undo prepareWithInvocationTarget:self] removeObjectFromEmployeesAtIndex:index];
+    if(! [undo isUndoing]) {
+        [undo setActionName:@"Add Person"];
+    }
+
+    // add into list
+    [self startObservingPerson:p];
+    [employees insertObject:p atIndex:index];
+}
+- (void)removeObjectFromEmployeesAtIndex:(NSUInteger)index {
+    Person *p = [employees objectAtIndex:index];
+
+    NSLog(@"removing %@ from %@", p, employees);
+
+    // undo
+    NSUndoManager *undo = [self undoManager];
+    [[undo prepareWithInvocationTarget:self] insertObject:p inEmployeesAtIndex:index];
+    if(![undo isUndoing]) {
+        [undo setActionName:@"Remove Person"];
+    }
+
+    // remove
+    [self stopObservingPerson:p];
+    [employees removeObjectAtIndex:index];
+}
+
+- (void)startObservingPerson: (Person *)person {
+    [person addObserver:self forKeyPath:@"personName" options:NSKeyValueObservingOptionOld context:DocumentKVOContext];
+    [person addObserver:self forKeyPath:@"expectedRaise" options:NSKeyValueObservingOptionOld context:DocumentKVOContext];
+    
+}
+- (void)stopObservingPerson: (Person *)person {
+    [person removeObserver:self forKeyPath:@"personName" context:DocumentKVOContext];
+    [person removeObserver:self forKeyPath:@"expectedRaise" context:DocumentKVOContext];
+}
+
+- (void)changeKeyPath:(NSString *)keyPath ofObject:(id)obj toValue:(id)newValue {
+    [obj setValue:newValue forKeyPath:keyPath];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
+    if(context != DocumentKVOContext) {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+        return;
+    }
+
+    // add undo action
+    NSUndoManager *undo = [self undoManager];
+    id oldValue = [change objectForKey:NSKeyValueChangeOldKey];
+    if(oldValue == [NSNull null]) {
+        oldValue = nil;
+    }
+
+    [[undo prepareWithInvocationTarget:self] changeKeyPath:keyPath ofObject:object toValue:oldValue];
+    [undo setActionName:@"Edit"];
 }
 
 @end
