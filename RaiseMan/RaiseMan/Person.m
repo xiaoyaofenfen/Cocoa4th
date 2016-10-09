@@ -21,6 +21,22 @@
     return self;
 }
 
+- (instancetype)initWithCoder:(NSCoder *)decoder {
+    self = [super init];
+    if (self) {
+        expectedRaise = [decoder decodeDoubleForKey:@"expectedRaise"];
+        personName = [decoder decodeObjectForKey:@"personName"];
+    }
+
+    return self;
+}
+
+
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    [encoder encodeDouble:expectedRaise forKey:@"expectedRaise"];
+    [encoder encodeObject:personName forKey:@"personName"];
+}
+
 - (void) setNilValueForKey:(NSString *)key {
     if([key isEqualToString:@"expectedRaise"]) {
         [self setExpectedRaise:0.0];
