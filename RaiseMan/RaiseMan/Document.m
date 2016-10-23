@@ -162,7 +162,7 @@ static void *DocumentKVOContext;
     [employeeController rearrangeObjects];
     NSArray *a = [employeeController arrangedObjects];
 
-    NSUInteger *row = [a indexOfObjectIdenticalTo:p];
+    NSUInteger row = [a indexOfObjectIdenticalTo:p];
 
     NSLog(@"staring edit of %@ in row %lu", p, row);
 

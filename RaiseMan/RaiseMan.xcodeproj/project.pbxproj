@@ -15,6 +15,8 @@
 		8FE6F2F21D96C8DD0077C42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6F2F11D96C8DD0077C42A /* Assets.xcassets */; };
 		8FE6F2F51D96C8DD0077C42A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6F2F31D96C8DD0077C42A /* MainMenu.xib */; };
 		8FE6F2FE1D96C9DF0077C42A /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE6F2FD1D96C9DF0077C42A /* Person.m */; };
+		8FF5A4F61DBC908300942EAD /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF5A4F41DBC908300942EAD /* PreferenceController.m */; };
+		8FF5A4F71DBC908300942EAD /* PreferenceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5A4F51DBC908300942EAD /* PreferenceController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,9 @@
 		8FE6F2F61D96C8DD0077C42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FE6F2FC1D96C9DF0077C42A /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		8FE6F2FD1D96C9DF0077C42A /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		8FF5A4F31DBC908300942EAD /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
+		8FF5A4F41DBC908300942EAD /* PreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferenceController.m; sourceTree = "<group>"; };
+		8FF5A4F51DBC908300942EAD /* PreferenceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferenceController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +72,9 @@
 				8FE6F2E61D96C8DD0077C42A /* AppDelegate.m */,
 				8FE6F2EB1D96C8DD0077C42A /* Document.h */,
 				8FE6F2EC1D96C8DD0077C42A /* Document.m */,
+				8FF5A4F31DBC908300942EAD /* PreferenceController.h */,
+				8FF5A4F41DBC908300942EAD /* PreferenceController.m */,
+				8FF5A4F51DBC908300942EAD /* PreferenceController.xib */,
 				8FE6F2FC1D96C9DF0077C42A /* Person.h */,
 				8FE6F2FD1D96C9DF0077C42A /* Person.m */,
 				8FE6F2EE1D96C8DD0077C42A /* Document.xib */,
@@ -146,6 +154,7 @@
 			files = (
 				8FE6F2F21D96C8DD0077C42A /* Assets.xcassets in Resources */,
 				8FAA4E151DA9C10A0009F22E /* txt.icns in Resources */,
+				8FF5A4F71DBC908300942EAD /* PreferenceController.xib in Resources */,
 				8FE6F2F01D96C8DD0077C42A /* Document.xib in Resources */,
 				8FE6F2F51D96C8DD0077C42A /* MainMenu.xib in Resources */,
 			);
@@ -160,6 +169,7 @@
 			files = (
 				8FE6F2ED1D96C8DD0077C42A /* Document.m in Sources */,
 				8FE6F2EA1D96C8DD0077C42A /* main.m in Sources */,
+				8FF5A4F61DBC908300942EAD /* PreferenceController.m in Sources */,
 				8FE6F2FE1D96C9DF0077C42A /* Person.m in Sources */,
 				8FE6F2E71D96C8DD0077C42A /* AppDelegate.m in Sources */,
 			);
