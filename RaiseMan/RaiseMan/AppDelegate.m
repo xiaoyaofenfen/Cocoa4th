@@ -14,6 +14,7 @@
 @property PreferenceController *preferenceController;
 
 - (IBAction)showPreferencePanel:(id)sender;
+- (IBAction)showAboutPanel:(id)sender;
 
 @end
 
@@ -38,6 +39,10 @@
     NSLog(@"showing %@", preferenceController);
 
     [preferenceController showWindow:self];
+}
+
+- (IBAction)showAboutPanel:(id)sender {
+    BOOL sucessful = [NSBundle loadNibNamed:@"AboutWindow" owner:self];
 }
 
 @end
