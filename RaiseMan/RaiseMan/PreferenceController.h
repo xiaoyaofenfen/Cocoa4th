@@ -8,6 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 
+extern NSString *const TSTableBgColorKey;
+extern NSString *const TSEmptyDocKey;
+
 @interface PreferenceController : NSWindowController
+
++ (NSColor *)preferenceTableBgColor;
++ (void)setPreferenceTableBgColor:(NSColor *)color;
++ (BOOL)preferenceEmptyDoc;
++ (void)setPreferenceEmptyDoc:(BOOL)emptyDoc;
 
 @end

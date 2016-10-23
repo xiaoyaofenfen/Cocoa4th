@@ -18,10 +18,26 @@
 
 @end
 
+extern NSString *const TSTableBgColorKey;
+extern NSString *const TSEmptyDocKey;
+
 @implementation AppDelegate
 
 @synthesize preferenceController;
 
+
++ (void)initialize {
+    NSMutableDictionary *defaultValues = [NSMutableDictionary dictionary];
+
+    NSData *colorAsData = [NSKeyedArchiver archivedDataWithRootObject:[NSColor yellowColor]];
+
+    [defaultValues setObject:colorAsData forKey:TSTableBgColorKey];
+    [defaultValues setObject:[NSNumber numberWithBool:YES] forKey:TSEmptyDocKey];
+
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultValues];
+
+    NSLog(@"registered defaults %@", defaultValues);
+}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
@@ -29,6 +45,11 @@
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
+}
+
+- (BOOL)applicationShouldOpenUntitledFile:(NSApplication *)sender {
+
+    return [PreferenceController preferenceEmptyDoc];
 }
 
 - (IBAction)showPreferencePanel:(id)sender {

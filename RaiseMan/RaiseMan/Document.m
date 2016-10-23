@@ -8,6 +8,7 @@
 
 #import "Document.h"
 #import "Person.h"
+#import "PreferenceController.h"
 
 static void *DocumentKVOContext;
 
@@ -73,6 +74,13 @@ static void *DocumentKVOContext;
 
     [self setEmployees:newArray];
     return YES;
+}
+
+
+- (void)windowControllerDidLoadNib:(NSWindowController *)windowController {
+    [super windowControllerDidLoadNib:windowController];
+    [tableView setBackgroundColor:[PreferenceController preferenceTableBgColor]];
+
 }
 
 - (void)insertObject:(Person *)p inEmployeesAtIndex:(NSUInteger)index {

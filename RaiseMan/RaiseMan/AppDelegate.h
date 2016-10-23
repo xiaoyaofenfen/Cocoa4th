@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "PreferenceController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
