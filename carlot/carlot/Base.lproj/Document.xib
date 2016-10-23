@@ -264,7 +264,7 @@
             </connections>
             <point key="canvasLocation" x="258.5" y="468"/>
         </window>
-        <arrayController mode="entity" entityName="Car" automaticallyPreparesContent="YES" id="Csd-qY-576" userLabel="Cars">
+        <arrayController mode="entity" entityName="Car" automaticallyPreparesContent="YES" id="Csd-qY-576" userLabel="Cars" customClass="CarArrayController">
             <connections>
                 <binding destination="-2" name="managedObjectContext" keyPath="managedObjectContext" id="kRJ-s8-6xe"/>
             </connections>
