@@ -9,4 +9,6 @@
 #import <Cocoa/Cocoa.h>
 
 @interface Document : NSPersistentDocument
+
+
 @end

@@ -8,6 +8,8 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="Document">
             <connections>
+                <outlet property="carArrayController" destination="Csd-qY-576" id="y4z-KC-ee9"/>
+                <outlet property="tableView" destination="4rp-Yb-N4z" id="hPY-id-TgG"/>
                 <outlet property="window" destination="xOd-HO-29H" id="JIz-fz-R2o"/>
             </connections>
         </customObject>
@@ -177,7 +179,7 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="add:" target="Csd-qY-576" id="7xR-32-gT7"/>
+                            <action selector="createNewObject:" target="-2" id="PD4-MG-hku"/>
                             <binding destination="Csd-qY-576" name="enabled" keyPath="canAdd" id="6CV-Kl-fnD"/>
                         </connections>
                     </button>
